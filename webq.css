@@ -1,1 +1,37 @@
-/*.-.*/
+/* anysome*/
+
+
+/* footer */
+#footer_{
+    box-sizing: border-box;
+    background-color: rgba(71, 123, 71, 1);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+#cont_copy{
+    display: flex;
+    align-items: center;
+    
+}
+
+#cont_contactos ul{
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#cont_redes{
+    
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.r_img{
+    width: 70px;
+    border-radius: 50%;
+}
+/* fin del footer*/
+
+
