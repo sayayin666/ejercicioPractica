@@ -1,0 +1,124 @@
+:root {
+  --verde-sena: #39A900;
+  --fondo: #f5f6f8;
+  --card: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+  background: var(--fondo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 100vw;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 0 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titulo {
+  width: 100vw;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--fondo);
+  background: var(--verde-sena);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.panel-lugares {
+  background: #d6d5d6;
+  border-radius: 12px;
+  padding: 6px;
+  min-height: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  overflow: hidden;
+}
+
+.lista-lugares {
+  max-height: 520px;
+  overflow: auto;
+  background: #7d8679;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-lugares .list-group-item {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin: 6px;
+  padding: 0.55rem 0.8rem;
+  transition: background 0.18s ease, transform 0.12s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lista-lugares .list-group-item:hover {
+  background: #f3a3e3;
+  transform: translateY(-2px);
+}
+
+.direccion {
+  display: block;
+  color: #222;
+  text-decoration: none;
+  width: 100%;
+}
+
+.mapa-contenedor {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#map {
+  width: 100%;
+  height: 720px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.leaflet-control-zoom { box-shadow: none; }
+
+.info {
+  background: #f6ebeb;
+  padding: 12px;
+  border-left: 4px solid var(--verde-sena);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+  #map { height: 380px; }
+  .panel-lugares { order: 2; max-height: 240px; }
+}
+
+html { scroll-behavior: smooth; }
